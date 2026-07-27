@@ -280,6 +280,200 @@ footer{padding:28px 0;color:var(--muted);font-size:.75rem}
   .contact-shell{padding:28px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* ===== Talks grid ===== */
+.talk-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:28px;
+}
+@media (max-width:860px){
+  .talk-grid{grid-template-columns:1fr}
+}
+
+/* ===== Card shell ===== */
+.talk-card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border-radius:var(--radius-lg);
+  border:1px solid var(--border);
+  min-height:340px;
+  display:flex;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow .35s var(--ease), transform .35s var(--ease);
+}
+.talk-card:hover{
+  box-shadow:var(--shadow-md);
+  transform:translateY(-4px);
+}
+
+/* ===========================================
+Large Background Typography
+=========================================== */
+
+.talk-card{
+ position:relative;
+ overflow:hidden;
+}
+
+.talk-card-bg-text{
+
+ position:absolute;
+
+ inset:0;
+
+ display:flex;
+ align-items:center;
+ justify-content:center;
+
+ z-index:0;
+
+ font-size:clamp(5rem, 10vw, 8rem);
+
+ font-weight:900;
+
+ letter-spacing:-0.08em;
+
+ text-transform:uppercase;
+
+ user-select:none;
+ pointer-events:none;
+ white-space:nowrap;
+
+ color:rgba(15,23,42,.045);
+
+ transition:
+     transform .45s var(--ease),
+     color .35s var(--ease);
+
+}
+
+.talk-card:hover .talk-card-bg-text{
+
+ transform:scale(1.05);
+
+ color:rgba(15,23,42,.07);
+
+}
+
+html[data-theme="dark"] .talk-card-bg-text{
+
+ color:rgba(255,255,255,.05);
+
+}
+
+html[data-theme="dark"] .talk-card:hover .talk-card-bg-text{
+
+ color:rgba(255,255,255,.08);
+
+}
+
+
+
+/* ===========================================
+Theme-specific logo tweaks
+=========================================== */
+
+html[data-theme="light"] .talk-card-bg img{
+
+ opacity:.08;
+
+}
+
+html[data-theme="dark"] .talk-card-bg img{
+
+ opacity:.12;
+
+}
+
+.talk-card-content{
+
+  padding:40px;
+  gap:32px;
+
+}
+
+/* ===== Top row: number + tag ===== */
+.talk-card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.talk-number{
+  font-size:.8rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  color:var(--faint);
+}
+.talk-tag{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid var(--border-strong);
+  background:var(--surface);
+  color:var(--sage);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+/* ===== Main text block ===== */
+.talk-main{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.talk-university h3{
+
+  font-size:2.2rem;
+  font-weight:750;
+  letter-spacing:-0.04em;
+  margin-bottom:6px;
+
+}
+.talk-university span{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:.9rem;
+  font-weight:600;
+}
+.talk-description{
+  max-width:46ch;
+  color:var(--text);
+  font-size:.96rem;
+  line-height:1.6;
+}
+
+
+/* ===== CTA ===== */
+.talk-bottom{
+  display:flex;
+  justify-content:flex-end;
+}
+.talk-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 20px;
+  border-radius:999px;
+  background:var(--navy);
+  color:var(--surface);
+  font-size:.88rem;
+  font-weight:700;
+  letter-spacing:.01em;
+  text-decoration:none;
+  transition:background .25s var(--ease), transform .25s var(--ease), gap .25s var(--ease);
+}
+.talk-cta svg{transition:transform .25s var(--ease)}
+.talk-cta:hover{
+  background:var(--navy-strong);
+  gap:12px;
+}
+.talk-cta:hover svg{transform:translate(2px,-2px)}
 </style>
 </head>
 <body>
@@ -293,6 +487,7 @@ footer{padding:28px 0;color:var(--muted);font-size:.75rem}
       <li><a href="#research">Research</a></li>
       <li><a href="#teaching">Teaching</a></li>
       <li><a href="#writing">Writing</a></li>
+      <li><a href="#talks">Talks</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -381,7 +576,7 @@ footer{padding:28px 0;color:var(--muted);font-size:.75rem}
 <div class="td">Information Technology University, Punjab — where I currently teach.</div>
 </div>
 <div class="timeline-item">
-<div class="ty">Jul 2016 — Present</div>
+<div class="ty">Jul 2016 — Jul 2019</div>
 <div class="tt">Assistant Professor, FOIT-UCP</div>
 <div class="td">University of Central Punjab, Faculty of Information Technology.</div>
 </div>
@@ -640,6 +835,161 @@ footer{padding:28px 0;color:var(--muted);font-size:.75rem}
       </div>
     </div>
   </section>
+
+  <section class="section" id="talks">
+    <div class="container">
+  
+      <div class="section-head">
+        <div>
+          <span class="section-label">Talks</span>
+          <h2>Invited talks and guest lectures delivered at leading universities.</h2>
+        </div>
+        <p>
+          Selected presentations on algorithms, computer science education,
+          computational thinking, and research shared with students and faculty.
+        </p>
+      </div>
+  
+      <div class="talk-grid">
+  
+        <article class="talk-card">
+<div class="talk-card-bg-text" aria-hidden="true">LUMS</div>          <div class="talk-card-overlay"></div>
+  
+          <div class="talk-card-content">
+            <div class="talk-card-top">
+              <span class="talk-number">01</span>
+              <span class="talk-tag">Guest Lecture</span>
+            </div>
+  
+            <div class="talk-main">
+              <div class="talk-university">
+                <h3>LUMS</h3>
+                <span>Lahore University of Management Sciences</span>
+              </div>
+              <p class="talk-description">
+                A keynote presentation discussing research, algorithms,
+                computational thinking, and modern computer science education.
+              </p>
+            </div>
+  
+            <div class="talk-bottom">
+              <a href="https://canva.link/ak5vs0z5ud8groi"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="talk-cta">
+                View Presentation
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+  
+        <!-- UET -->
+        <article class="talk-card">
+          <div class="talk-card-bg-text" aria-hidden="true">UET</div>          <div class="talk-card-overlay"></div>
+          <div class="talk-card-overlay"></div>
+  
+          <div class="talk-card-content">
+            <div class="talk-card-top">
+              <span class="talk-number">02</span>
+              <span class="talk-tag">Academic Talk</span>
+            </div>
+  
+            <div class="talk-main">
+              <div class="talk-university">
+                <h3>UET</h3>
+                <span>University of Engineering &amp; Technology</span>
+              </div>
+              <p class="talk-description">
+                An invited lecture exploring engineering education,
+                innovation, and practical applications of computing.
+              </p>
+            </div>
+  
+            <div class="talk-bottom">
+              <a href="https://canva.link/sepp7ynrb0unhqp"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="talk-cta">
+                View Presentation
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Kinnaird -->
+        <article class="talk-card">
+          <div class="talk-card-bg-text" aria-hidden="true">KINNAIRD</div>          <div class="talk-card-overlay"></div>
+          <div class="talk-card-overlay"></div>
+  
+          <div class="talk-card-content">
+            <div class="talk-card-top">
+              <span class="talk-number">03</span>
+              <span class="talk-tag">Invited Session</span>
+            </div>
+  
+            <div class="talk-main">
+              <div class="talk-university">
+                <h3>KINNAIRD</h3>
+                <span>Kinnaird College for Women</span>
+              </div>
+              <p class="talk-description">
+                A university session focusing on research, innovation,
+                and inspiring future computer scientists.
+              </p>
+            </div>
+  
+            <div class="talk-bottom">
+              <a href="https://canva.link/936ndq1zsl3s6a5"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="talk-cta">
+                View Presentation
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+  
+        <!-- UMT -->
+        <article class="talk-card">
+          <div class="talk-card-bg-text" aria-hidden="true">UMT</div>          <div class="talk-card-overlay"></div>
+          <div class="talk-card-overlay"></div>
+  
+          <div class="talk-card-content">
+            <div class="talk-card-top">
+              <span class="talk-number">04</span>
+              <span class="talk-tag">Professional Lecture</span>
+            </div>
+  
+            <div class="talk-main">
+              <div class="talk-university">
+                <h3>UMT</h3>
+                <span>University of Management &amp; Technology</span>
+              </div>
+              <p class="talk-description">
+                A professional lecture highlighting emerging technologies,
+                research, and higher education.
+              </p>
+            </div>
+  
+            <div class="talk-bottom">
+              <a href="https://canva.link/48g3cdfux1rjgbt"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="talk-cta">
+                View Presentation
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+  
+      </div>
+    </div>
+  </section>
+  
 
   <section class="section" id="contact">
     <div class="container">
