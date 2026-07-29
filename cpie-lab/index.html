@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CPiE — Center for Programming and Immersive Education | ITU Lahore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Animated background canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Custom cursor -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-text">CPiE</span>
+      <span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#societies">Societies</a></li>
+      <li><a href="#codeforge">CodeForge</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="pulse-dot"></span>
+      Information Technology University, Lahore
+    </div>
+    <h1 class="hero-title">
+      <span class="gradient-text">Center for Programming</span><br/>
+      <span>&amp; Immersive Education</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="mono">CPiE — "see-pi"</span> · Reimagining how programming is taught, learned, and lived.
+      Where pedagogy meets <span class="highlight">Virtual Reality</span>, research, and real-world impact.
+    </p>
+    <div class="hero-cta">
+      <a href="#research" class="btn btn-primary">Explore Our Research <span>&rarr;</span></a>
+      <a href="#vision" class="btn btn-ghost">Our Vision</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num" data-target="15">0</div><div class="stat-label">Student Researchers</div></div>
+      <div class="stat"><div class="stat-num" data-target="6">0</div><div class="stat-label">Active Research Papers</div></div>
+      <div class="stat"><div class="stat-num" data-target="4">0</div><div class="stat-label">Societies Led</div></div>
+      <div class="stat"><div class="stat-num" data-target="3">0</div><div class="stat-label">International Collabs</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="section" id="vision">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">01 / Vision</span>
+      <h2 class="section-title">Bridging the <span class="gradient-text">5–8% gap</span></h2>
+      <p class="section-sub">
+        The P@SHA report found that only 5–8% of CS graduates are considered employable.
+        CPiE exists to change that — through research, immersive technology, and rethinking how programming is taught.
+      </p>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-card" data-tilt>
+        <h3>Computational Thinking</h3>
+        <p>Strengthen problem-solving abilities through competitive programming frameworks and grassroots-level research into programming pedagogy.</p>
+      </div>
+      <div class="vision-card" data-tilt>
+        <h3>Immersive Learning</h3>
+        <p>Pioneering Virtual Reality-based instruction in Pakistan, with active collaborations with Copenhagen Business School, Kristiania University College, and the University of Toronto.</p>
+      </div>
+      <div class="vision-card" data-tilt>
+        <h3>Industry Bridge</h3>
+        <p>Linking academia with DeltaLab, Mindstorm Studio, PITB, dirAction, Takhleeq, Educative, and SeedProgramming to produce industry-ready graduates.</p>
+      </div>
+      <div class="vision-card" data-tilt>
+        <h3>Nano Programs</h3>
+        <p>Scalable training tracks in AI, Data Science, Game Development, and Mathematical Foundations — launching this summer, Insha'Allah.</p>
+      </div>
+    </div>
+
+</section>
+
+<!-- RESEARCH -->
+<section class="section section-dark" id="research">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">02 / Research</span>
+      <h2 class="section-title">Research at the <span class="gradient-text">Frontier</span></h2>
+      <p class="section-sub">From immersive VR studies to the foundations of mathematical reasoning in code.</p>
+    </div>
+
+    <div class="research-showcase">
+      <!-- Featured: VR study -->
+      <article class="research-card research-featured">
+        <div class="rc-image">
+          <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=900&q=80" alt="Virtual Reality Education" loading="lazy" />
+          <span class="rc-badge">Published · ECIS 2025</span>
+        </div>
+        <div class="rc-body">
+          <span class="rc-tag">A+ Conference · Meta Study</span>
+          <h3>Teaching Programming in VR vs. Online vs. Physical Classrooms</h3>
+          <p>One of the first immersive Virtual Reality–based studies in Pakistan, published at the European Conference on Information Systems in collaboration with Copenhagen Business School and Kristiania University College. Now extended into a longitudinal full-semester study with the University of Toronto.</p>
+          <div class="rc-meta">
+            <span>🇩🇰 Copenhagen Business School</span>
+            <span>🇳🇴 Kristiania University College</span>
+            <span>🇨🇦 University of Toronto</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="rc-image">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" alt="Mathematical Logic" loading="lazy" />
+          </div>
+          <div class="rc-body">
+            <span class="rc-tag">Logic · Pedagogy</span>
+            <h3>Quantifiers to Loops</h3>
+            <p>Linking <span class="mono">∃ Existential</span> and <span class="mono">∀ Universal</span> quantifiers in propositional logic to <span class="mono">for / while</span> loop constructs — making mathematical reasoning tangible to programmers.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="rc-image">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="Concept Maps" loading="lazy" />
+          </div>
+          <div class="rc-body">
+            <span class="rc-tag">In Progress · Pedagogy</span>
+            <h3>Concept Maps for Intuition</h3>
+            <p>An ongoing exploration into how Concept Maps broaden intuitive thinking — unlocking new methods of teaching that help students visualize abstract relationships in code.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="rc-image">
+            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&q=80" alt="Induction" loading="lazy" />
+          </div>
+          <div class="rc-body">
+            <span class="rc-tag">Active</span>
+            <h3>Induction &amp; Inductive Hypothesis</h3>
+            <p>A research paper exploring induction and the inductive hypothesis — and how its rigorous teaching transforms the way students reason about recursion and correctness.</p>
+          </div>
+        </article>
+
+        <article class="research-card">
+          <div class="rc-image">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="MS Research" loading="lazy" />
+          </div>
+          <div class="rc-body">
+            <span class="rc-tag">MS Theses</span>
+            <h3>Two Active MS Research Projects</h3>
+            <p>Two ongoing research projects under progress with Master's students — extending CPiE's footprint into deeper, theory-grounded contributions to programming education.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIETIES -->
+<section class="section" id="societies">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">03 / Societies</span>
+      <h2 class="section-title">Communities <span class="gradient-text">We Lead</span></h2>
+      <p class="section-sub">Beyond the lab — student-led societies powering the culture of curiosity at ITU.</p>
+    </div>
+
+    <div class="societies-grid">
+      <!-- GDG -->
+      <div class="society-card society-gdg" data-tilt>
+        <div class="society-bg" style="background-image:url('http://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/events/IMG_3370_5WDD8Ep.JPG')"></div>
+        <div class="society-content">
+          <div class="society-logo">
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <h3>GDG on Campus · ITU</h3>
+          <p>Google Developer Group — driving developer culture at ITU through hackathons, study jams, and tech talks.</p>
+          <div class="society-flag">
+            <strong>Flagship: <span class="gradient-text">CodeRush</span></strong>
+            <span>One of Pakistan's most celebrated tech events, hosted under this society.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MUN -->
+      <div class="society-card society-mun" data-tilt>
+        <div class="society-bg" style="background-image:url('https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=800&q=80')"></div>
+        <div class="society-content">
+          <div class="society-emoji">🌍</div>
+          <h3>ITU Model United Nations</h3>
+          <p>Cultivating diplomacy, debate, and global perspective — bridging technology students with public-policy thinking and leadership.</p>
+          <div class="society-flag">
+            <strong>Faculty Lead</strong>
+            <span>Personally mentored by Mr. Sarfraz Raza.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nebula -->
+      <div class="society-card society-nebula" data-tilt>
+        <div class="society-bg" style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80')"></div>
+        <div class="society-content">
+          <div class="society-emoji">🛰️</div>
+          <h3>Nebula Society · ITU</h3>
+          <p>Pakistan's emerging space &amp; aerospace innovation society at ITU — running NASA Space Apps Challenge and high-impact international competitions.</p>
+          <div class="society-flag flag-gold">
+            <strong>🏆 National Winners — AIS 2025</strong>
+            <span>Selected for <strong>ActInSpace 2026 International Finals</strong>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CODEFORGE -->
+<section class="section section-dark" id="codeforge">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">04 / Tooling</span>
+      <h2 class="section-title">Meet <span class="gradient-text">CodeForge</span></h2>
+      <p class="section-sub">A fully-fledged IDE built in-house by our team — for evaluating coding courses, lab assignments, and exams with automated correctness checking.</p>
+    </div>
+
+    <div class="codeforge-showcase">
+      <div class="cf-window">
+        <div class="cf-titlebar">
+          <span class="cf-dot red"></span>
+          <span class="cf-dot yellow"></span>
+          <span class="cf-dot green"></span>
+          <span class="cf-title">CodeForge — OOP Lab Exam</span>
+        </div>
+        <div class="cf-body">
+          <div class="cf-sidebar">
+            <div class="cf-file active">📄 main.cpp</div>
+            <div class="cf-file">📄 Stack.h</div>
+            <div class="cf-file">📄 tests.cpp</div>
+            <div class="cf-file">✅ submission.json</div>
+          </div>
+          <div class="cf-editor">
+<pre><code><span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">using namespace</span> std;
+
+<span class="cmt">// CodeForge auto-evaluates each test case</span>
+<span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt;
+<span class="kw">class</span> <span class="cls">Stack</span> {
+    T* data;
+    <span class="kw">int</span> top, cap;
+<span class="kw">public</span>:
+    Stack(<span class="kw">int</span> c=<span class="num">10</span>) : top(-<span class="num">1</span>), cap(c) {
+        data = <span class="kw">new</span> T[cap];
+    }
+    <span class="kw">void</span> push(T v) { data[++top] = v; }
+    T pop()        { <span class="kw">return</span> data[top--]; }
+};</code></pre>
+          </div>
+          <div class="cf-tests">
+            <div class="cf-test pass">✅ Test 01 — push/pop · 12ms</div>
+            <div class="cf-test pass">✅ Test 02 — overflow · 8ms</div>
+            <div class="cf-test pass">✅ Test 03 — templates · 15ms</div>
+            <div class="cf-test pass">✅ Test 04 — destructor · 9ms</div>
+            <div class="cf-test running">⏳ Test 05 — stress (10⁶) · running...</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cf-features">
+        <div class="cf-feature">
+          <div class="cff-num">01</div>
+          <h4>Used in Live Exams</h4>
+          <p>The <strong>OOP Lab Exam</strong> was conducted on CodeForge — proven at scale under real conditions.</p>
+        </div>
+        <div class="cf-feature">
+          <div class="cff-num">02</div>
+          <h4>Weekly Auto-Grading</h4>
+          <p>Weekly assignments and lab tasks are now evaluated automatically — saving instructors hundreds of hours.</p>
+        </div>
+        <div class="cf-feature">
+          <div class="cff-num">03</div>
+          <h4>Built by Students</h4>
+          <p>Designed and engineered by a CPiE team member — proof that our students don't just learn the tools, they build them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section" id="events">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">05 / Events &amp; Wins</span>
+      <h2 class="section-title">Highlights &amp; <span class="gradient-text">Milestones</span></h2>
+    </div>
+
+    <div class="events-marquee">
+      <div class="marquee-track">
+        <span>CodeRush</span><span>·</span>
+        <span>ActInSpace 2026 Finals</span><span>·</span>
+        <span>AIS 2025 National Winners</span><span>·</span>
+        <span>NASA Space Apps</span><span>·</span>
+        <span>VR Programming Study</span><span>·</span>
+        <span>ECIS 2025 Publication</span><span>·</span>
+        <span>ITU MUN</span><span>·</span>
+        <span>Nano Programs Launch</span><span>·</span>
+        <!-- duplicate for seamless loop -->
+        <span>CodeRush</span><span>·</span>
+        <span>ActInSpace 2026 Finals</span><span>·</span>
+        <span>AIS 2025 National Winners</span><span>·</span>
+        <span>NASA Space Apps</span><span>·</span>
+        <span>VR Programming Study</span><span>·</span>
+        <span>ECIS 2025 Publication</span><span>·</span>
+        <span>ITU MUN</span><span>·</span>
+        <span>Nano Programs Launch</span><span>·</span>
+      </div>
+    </div>
+
+    <div class="events-grid">
+      <div class="event-card event-coderush">
+        <div class="event-img">
+          <img src="coderush.jpeg" alt="CodeRush" loading="lazy" />
+        </div>
+        <div class="event-body">
+          <span class="event-tag">Flagship Event · GDG ITU</span>
+          <h3>CodeRush</h3>
+          <p>One of Pakistan's most well-known competitive programming tech events — a high-energy showcase of ITU's coding culture, and a magnet for the country's brightest student programmers.</p>
+        </div>
+      </div>
+
+      <div class="event-card event-ais">
+        <div class="event-img">
+          <img src="actinspace.jpg" alt="ActInSpace" loading="lazy" />
+        </div>
+        <div class="event-body">
+          <span class="event-tag gold">🏆 National Champions</span>
+          <h3>AIS 2025 → ActInSpace 2026</h3>
+          <p>Nebula Society students — under CPiE — became <strong>national winners of AIS 2025</strong> and earned a spot at the <strong>ActInSpace 2026 International Finals</strong>. A defining milestone for ITU on the world stage.</p>
+        </div>
+      </div>
+
+      <div class="event-card event-nasa">
+        <div class="event-img">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80" alt="NASA Space Apps" loading="lazy" />
+        </div>
+        <div class="event-body">
+          <span class="event-tag">Annual</span>
+          <h3>NASA Space Apps Challenge</h3>
+          <p>Hosted under Nebula Society — bringing the world's largest hackathon to ITU students with real space-data problem sets from NASA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section section-dark" id="team">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">06 / Team</span>
+      <h2 class="section-title">Led by <span class="gradient-text">Vision</span></h2>
+    </div>
+
+    <div class="team-lead">
+      <div class="lead-avatar">
+        <div class="avatar-ring"></div>
+        <img class="avatar-photo" src="sarfraz.jpeg" alt="Mr. Sarfraz Raza" />
+      </div>
+      <div class="lead-info">
+        <h3>Mr. Sarfraz Raza</h3>
+        <p class="lead-role">Teaching Fellow · AI/CS Department · Information Technology University, Lahore</p>
+        <p class="lead-bio">
+          Founder &amp; Director of CPiE. Researcher in programming pedagogy, immersive learning, and computational thinking.
+          Speaker at UET Lahore, Kinnaird, UMT, FAST-NUCES, and LUMS. Recognized by NCEAC.
+          Founder of <strong>SeedProgramming</strong>. Mentor to <strong>10–15 active student researchers</strong>.
+        </p>
+        <div class="lead-affiliations">
+          <span class="aff">DeltaLab</span>
+          <span class="aff">Mindstorm Studio</span>
+          <span class="aff">PITB</span>
+          <span class="aff">dirAction</span>
+          <span class="aff">Takhleeq</span>
+          <span class="aff">Educative</span>
+          <span class="aff">SeedProgramming</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-students">
+      <h4 class="ts-title">Powered by <span class="gradient-text">10–15 Student Researchers</span></h4>
+      <div class="student-grid">
+        <div class="student-chip">2nd Year</div>
+        <div class="student-chip">3rd Year</div>
+        <div class="student-chip">MS Students</div>
+        <div class="student-chip">CodeForge Engineers</div>
+        <div class="student-chip">VR Researchers</div>
+        <div class="student-chip">Pedagogy Researchers</div>
+        <div class="student-chip">Society Leads</div>
+        <div class="student-chip">+ many more</div>
+      </div>
+    </div>
+
+    <div class="team-members">
+      <h4 class="ts-title">Meet the <span class="gradient-text">Researchers</span></h4>
+      <div class="members-grid">
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">HR</div>
+            <!-- <img class="member-photo" src="hasnain.jpg" alt="Hasnain Raza" /> -->
+          </div>
+          <h5 class="member-name">Hasnain Raza</h5>
+          <p class="member-dept">Department of Computer Science</p>
+          <p class="member-year">Batch 2023</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">HM</div>
+            <!-- <img class="member-photo" src="hassan-mujtaba.jpg" alt="Hassan Mujtaba" /> -->
+          </div>
+          <h5 class="member-name">Hassan Mujtaba</h5>
+          <p class="member-dept">Department of Computer Science</p>
+          <p class="member-year">Batch 2023</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">HN</div>
+            <!-- <img class="member-photo" src="hamza.jpg" alt="Hamza Naveed" /> -->
+          </div>
+          <h5 class="member-name">Hamza Naveed</h5>
+          <p class="member-dept">Department of Computer Science</p>
+          <p class="member-year">Batch 2023</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">FA</div>
+            <!-- <img class="member-photo" src="fatima.jpg" alt="Fatima Abdul Raheem" /> -->
+          </div>
+          <h5 class="member-name">Fatima Abdul Raheem</h5>
+          <p class="member-dept">Department of Artificial Intelligence</p>
+          <p class="member-year">Batch 2024</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">MA</div>
+            <!-- <img class="member-photo" src="muhammad-ali.jpg" alt="Muhammad Ali" /> -->
+          </div>
+          <h5 class="member-name">Muhammad Ali</h5>
+          <p class="member-dept">Department of Artificial Intelligence</p>
+          <p class="member-year">Batch 2024</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">AH</div>
+            <!-- <img class="member-photo" src="ahmad.jpg" alt="Ahmad Hassan" /> -->
+          </div>
+          <h5 class="member-name">Ahmad Hassan</h5>
+          <p class="member-dept">Department of Artificial Intelligence</p>
+          <p class="member-year">Batch 2024</p>
+        </div>
+
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="member-ring"></div>
+            <div class="member-initials">SF</div>
+            <!-- <img class="member-photo" src="shereen.jpg" alt="Shereen Fatima" /> -->
+          </div>
+          <h5 class="member-name">Shereen Fatima</h5>
+          <p class="member-dept">Department of Artificial Intelligence</p>
+          <p class="member-year">Batch 2024</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CTA -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cta">
+      <h2>Want to <span class="gradient-text">collaborate</span>?</h2>
+      <p>CPiE is open to academic, industry, and student partnerships. Let's build the future of programming education together.</p>
+      <div class="footer-buttons">
+        <a href="mailto:sarfraz.raza@itu.edu.pk" class="btn btn-primary">Get In Touch <span>&rarr;</span></a>
+        <a href="#home" class="btn btn-ghost">Back to Top ↑</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="fb-left">
+        <span class="logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">CPiE</span>
+          <span class="logo-bracket">/&gt;</span>
+        </span>
+        <span class="fb-tag">Center for Programming and Immersive Education</span>
+      </div>
+      <div class="fb-right">
+        <span>© 2026 ITU Lahore</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
